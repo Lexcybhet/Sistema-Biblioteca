@@ -1,0 +1,19 @@
+CREATE DATABASE Control_acceso;
+
+CREATE TABLE Usuario(Cedula_Usuario varchar(10) NOT NULL PRIMARY KEY, 
+		      Nombre_Usuario varchar(15) NOT NULL, 
+		      Apellido_Usuario varchar(15) NOT NULL, 
+		      Tipo_Usuario varchar(15) NOT NULL,
+		      Correo_Usuario varchar(30) NOT NULL,
+		      Contrasena varbinary(10) NOT NULL);
+					 
+CREATE TABLE Beneficiario(Cedula_Beneficiario varchar(10) NOT NULL PRIMARY KEY, 
+		            Nombre_Beneficiario varchar(15) NOT NULL, 
+                                        Apellido_Beneficiario varchar(15) NOT NULL,
+		            Genero varchar(10) NOT NULL,
+		            Tipo_Beneficiario varchar(20) NOT NULL,
+		            Carrera varchar(30) NOT NULL);
+	                          Correo_Beneficiario varchar(30) NOT NULL,);
+					      
+CREATE TABLE Equipos(Serial varchar(10) NOT NULL PRIMARY KEY, 
+					 Codigo varchar(15) NOT NULL); 

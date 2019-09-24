@@ -1,14 +1,3 @@
-<?php 
-
-  if (isset($_POST['submit'])) {
-    $Nombre =$_POST['NombreUsuario'];
-    $Apellido =$_POST['ApellidoUsuario'];
-    $Cedula =$_POST['CedulaUsuario'];
-    $Correo =$_POST['CorreoUsuario'];
-    $Contra =$_POST['Contrasena'];
-  }
-
-?>
 <!DOCTYPE html>
 <HTML lang="es">
 <HEAD>
@@ -39,34 +28,37 @@
             <div class="form-top">
               <h2>Registro de <span>Usuario</span></h2>
             </div>
-              <form class="form-reg" action="../Controladores/CrearUsuario.php" id="Usuario" name="Usuario" method="POST">
+            <?php
+              $id=$_REQUEST['Cedula_Usuario'];
+                 require '../Controladores/ConexionBaseDatos.php';
+                      $var_consulta= "SELECT * FROM Usuario WHERE Cedula_Usuario='$id'";
+                        $var_resultado = $Conexion->query($var_consulta);
+                        $var_fila=$var_resultado->fetch_array();
+                                  
+            ?>
+              <form class="form-reg" action="../Controladores/ModificarUsuario.php?Cedula_Usuario=<?php echo $var_fila ['Cedula_Usuario']; ?>" id="Usuario" name="Usuario" method="POST">
                 <label for="tipo"><B>Introduzca Nombre del Usuario: </B></label>
-                  <input class="input" type="text" name="NombreUsuario" placeholder="Nombre" required autofocus>
+                  <input class="input" type="text" name="NombreUsuario" placeholder="Nombre" value="<?php  echo $var_fila['Nombre_Usuario'];?>" required autofocus>
                 <label for="tipo"><B>Introduzca Apellido del Usuario: </B></label> 
-                  <input class="input" type="text" name="ApellidoUsuario" placeholder="Apellidos" required autofocus>
+                  <input class="input" type="text" name="ApellidoUsuario" placeholder="Apellidos" value="<?php  echo $var_fila['Apellido_Usuario'];?>"required autofocus>
                 <label for="tipo"><B>Introduzca Cedula del Usuario: </B></label> 
-                  <input class="input" type="text" name="CedulaUsuario" placeholder="Cedula" required >
+                  <input class="input" type="text" name="CedulaUsuario" placeholder="Cedula" value="<?php  echo $var_fila['Cedula_Usuario'];?>" required >
                 <label for="tipo"><B>Introduzca Correo Electrónico del Usuario: </B></label> 
-                  <input class="input" type="email" name="CorreoUsuario" placeholder="Correo Electrónico" required>
+                  <input class="input" type="email" name="CorreoUsuario" placeholder="Correo Electrónico" value="<?php  echo $var_fila['Correo_Usuario'];?>" required>
                 <label for="tipo"><B>Seleccione tipo de usuario: </B></label><br>
-                  <select name="TipoUsuario">
-                    <option value=""></option>
+                  <select name="TipoUsuario" value="<?php  echo $var_fila['Tipo_Usuario'];?>">
                     <option value="ADMINISTRADOR">ADMINISTRADOR</option>
                     <option value="ENCARGADO">ENCARGADO</option>
                   </select><br>
                     <label for="tipo"><B>Introduzca Contraseña Usuario: </B></label> 
-                     <input class="input" type="password" name="Contrasena" placeholder="Contraseña" required >
+                     <input class="input" type="password" name="ContrasenaU" placeholder="Contraseña" values="<?php  echo $var_fila['Contrasena'];?>" required >
                       <div class="btn-form">
                         <input class="btn-submit" type="submit" value="REGISTRAR">
                         <input class="btn-reset" type="reset" value="LIMPIAR">
                       </div>
-                  <?php  
-
-                    include "../Controladores/ValidarUsuarios.php";
-
-                  ?>    
               </form>
           </div>
+          
         </div>
       </section>
 <!-- Scripts -->

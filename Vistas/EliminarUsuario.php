@@ -22,23 +22,10 @@
       <section class="main container">
         <div class="contenido">
           <BR><HR>
-            <H1 align= "center">Consultar Usuario</H1>
-          <BR>
+            <H1 align= "center">Usuario Eliminado Exitosamente</H1>
+          <HR><BR>
             <center>
-              <table class="datos" border='1' align='center'>
-                <tr bgcolor='#E6E6E6'>
-                  <th>Cedula Usuario</th>
-                  <th>Nombre Usuario</th>
-                  <th>Apellido Usuario</th>
-                  <th>Tipo de Usuario</th>
-                  <th>Correo del Usuario</th>
-                </tr>
-                <?php        
-                  include "../Controladores/MostrarUsuarios.php";
-                ?>
-              </table>
-          <br><br>
-          <a href="Crear.php"><input class="btn-submit" type="submit" value="NUEVO USUARIO"></a>
+              <img src="Imagenes/Aprobado.png" width="150" height="170" hspace="5">
             </center>
         </div>
       </section>

@@ -22,24 +22,21 @@
       <section class="main container">
         <div class="contenido">
           <BR><HR>
-            <H1 align= "center">Consultar Usuario</H1>
-          <BR>
-            <center>
-              <table class="datos" border='1' align='center'>
-                <tr bgcolor='#E6E6E6'>
-                  <th>Cedula Usuario</th>
-                  <th>Nombre Usuario</th>
-                  <th>Apellido Usuario</th>
-                  <th>Tipo de Usuario</th>
-                  <th>Correo del Usuario</th>
-                </tr>
-                <?php        
-                  include "../Controladores/MostrarUsuarios.php";
-                ?>
-              </table>
-          <br><br>
-          <a href="Crear.php"><input class="btn-submit" type="submit" value="NUEVO USUARIO"></a>
-            </center>
+            <H1 align= "center">Modificar Usuario</H1>
+          <HR><BR>            
+            <div class="tabla-m">
+              <br>
+                <font class="Buscador" action="../Controladores/ModificarUsuario.php?Cedula_Usuario=<?php echo $var_fila ['Cedula_Usuario']; ?>" id="EliminarU" name="Eliminar" method="POST">
+                <fieldset>
+                  <p>Introduzca la Cedula del Usuario</p>
+                  <input class="input" type="search" name="Buscador" placeholder="Buscar..." name="btn_eliminar">
+                    <button type="submit">
+                      <a href="../Controladores/ModificarUsuario.php?Cedula_Usuario=<?php echo $var_fila ['Cedula_Usuario']; ?>"><span class="icon-search"></span></a>
+                    </button>
+                </fieldset>
+              </font>
+            </div>
+          
         </div>
       </section>
 <!-- Scripts -->

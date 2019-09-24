@@ -6,21 +6,22 @@ require 'ConexionBaseDatos.php';
 
 /*Definir Variables del Formulario*/
 
+	$id=$_REQUEST['Cedula_Beneficiario'];
 	$NombreB = $_POST['NombreBeneficiario'];
 	$ApellidoB = $_POST['ApellidoBeneficiario'];
 	$CedulaB = $_POST['CedulaBeneficiario'];
 	$GeneroB = $_POST['GeneroBeneficiario'];
 	$TipoB = $_POST['TipoBeneficiario'];
-	$CarreraB = $_POST['CarreraBeneficiario'];
+	$CarreraB = $_POST['CarreraBe'];
 	$CorreoB = $_POST['CorreoBeneficiario'];
 
-/*Metodo Para Introducir Datos en la Base de Datos*/
+/*Metodo Para Actualizar Datos en la Base de Datos*/
 
-	$Insertar = " INSERT INTO Beneficiario VALUES ('$CedulaB', '$NombreB', '$ApellidoB', '$GeneroB', '$TipoB', '$CarreraB', '$CorreoB') ";
+	$Actualizar = " UPDATE Beneficiario SET Cedula_Beneficiario='$CedulaB', Nombre_Beneficiario='$NombreB', Apellido_Beneficiario='$ApellidoB', Genero='$GeneroB', Tipo_Beneficiario='$TipoB', Carrera='$CarreraB', Correo_Beneficiario='$CorreoU' WHERE Cedula_Beneficiario='$id' ";
 
 /*Confirmar si se realiza*/
 
-		if ($Conexion->query($Insertar) === true) {
+		if ($Conexion->query($Actualizar) === true) {
 			echo "Registro Exitoso";
 			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";
 		}else{
@@ -28,4 +29,4 @@ require 'ConexionBaseDatos.php';
 			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";
 		}
 		
-?>
+?>	

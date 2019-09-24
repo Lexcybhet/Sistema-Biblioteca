@@ -19,10 +19,11 @@ require 'ConexionBaseDatos.php';
 /*Confirmar si se realiza*/
 
 		if ($Conexion->query($Insertar) === true) {
-			
-			require '../Vistas/RegistroExitoso.html';
+			echo "Registro Exitoso";
+			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";
 		}else{
-			require '../Vistas/RegistroFallido.html';
+			echo "Registro Fallido";
+			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";
 		}
 		
 ?>

@@ -1,6 +1,5 @@
 <?php
-    include_once 'user-session.php';
-    $userSession = new UserSession();
-    $userSession->closeSession();
-    header("location: ../index.php");
+	session_start();
+	session_destroy();
+	require '../Index.php';
 ?>

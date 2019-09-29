@@ -25,7 +25,7 @@
             <H1 align= "center">Consulta de Beneficiario</H1>
           <BR>
             <center>
-              <table class="datos" border='1' align='center'>
+              <table border='1' align='center'>
                 <tr bgcolor='#E6E6E6'>
                  <th>Cedula Beneficiario</th>
                  <th>Nombre Beneficiario</th>

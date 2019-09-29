@@ -61,7 +61,7 @@
                       <option value="PNF en Fonoaudiología">PNF en Fonoaudiología</option>
                       <option value="PNF en Geociencia">PNF en Geociencia</option>
                       <option value="PNF en Historia">PNF en Historia</option>
-                      <option value="PNF en Informática">PNF PNF en Agroalimentaciónnformática</option>
+                      <option value="PNF en Informática">PNF en Informática</option>
                       <option value="PNF en Turismo">PNF en Turismo</option>
                       <option value="Radiología e Imagenología">Radiología e Imagenología</option>
                       <option value="NO APLICA">NO APLICA</option>

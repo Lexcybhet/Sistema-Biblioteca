@@ -30,7 +30,7 @@
                 <a href=""><h3><span class="icon-user-plus"></span>Asignar Estación</h3></a>
               </div>
               <div class="boton-menu">
-                <a href="#"><h3><span class="icon-search"></span>Consultar Estaciones</h3></a>
+                <a href="ConsultarEstaciones.php"><h3><span class="icon-search"></span>Consultar Estaciones</h3></a>
               </div>
               <div class="boton-menu">
                 <a href="RegistrarEstacion.php"><h3><span class="icon-display"></span>Registrar Estación</h3></a>

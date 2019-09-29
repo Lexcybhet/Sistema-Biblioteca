@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-09-2019 a las 05:18:41
+-- Tiempo de generación: 29-09-2019 a las 07:25:13
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -38,13 +38,6 @@ CREATE TABLE `beneficiario` (
   `Correo_Beneficiario` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `beneficiario`
---
-
-INSERT INTO `beneficiario` (`Cedula_Beneficiario`, `Nombre_Beneficiario`, `Apellido_Beneficiario`, `Genero`, `Tipo_Beneficiario`, `Carrera`, `Correo_Beneficiario`) VALUES
-(1465849, 'Angel', 'Ramirez', 'MASCULINO', 'docente', 'turismo', 'asgh@gmail.com');
-
 -- --------------------------------------------------------
 
 --
@@ -56,14 +49,6 @@ CREATE TABLE `estaciones` (
   `Estado` varchar(15) NOT NULL,
   `Marca` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `estaciones`
---
-
-INSERT INTO `estaciones` (`Codigo`, `Estado`, `Marca`) VALUES
-('0', 'FUERASERVICIO', 'Lenovo'),
-('12', 'FUNCIONAL', '');
 
 -- --------------------------------------------------------
 
@@ -94,17 +79,6 @@ CREATE TABLE `usuario` (
   `Correo_Usuario` varchar(30) NOT NULL,
   `Contrasena` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `usuario`
---
-
-INSERT INTO `usuario` (`Cedula_Usuario`, `Nombre_Usuario`, `Apellido_Usuario`, `Tipo_Usuario`, `Correo_Usuario`, `Contrasena`) VALUES
-(123456, 'Angel', 'Ramirez', 'ENCARGADO', 'angel@gmail.com', '123445'),
-(1593022, 'Maria', 'Romero', 'ENCARGADO', 'maria@gmail.com', '1234'),
-(14400416, 'Marilexci', 'Carrillo', 'ENCARGADO', 'lexcim@gmail.com', '123456'),
-(15930224, 'Maria', 'Romero', 'ENCARGADO', 'maria@gmail.com', '1234'),
-(26931185, 'Lexcybhet', 'Rangel', 'ADMINISTRADOR', 'lexcybhetnr@gmail.com', '123456');
 
 --
 -- Índices para tablas volcadas

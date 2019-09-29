@@ -31,7 +31,7 @@
               <?php
               $id=$_REQUEST['Cedula_Beneficiario'];
                 require '../Controladores/ConexionBaseDatos.php';
-                  $var_consulta= "SELECT * FROM Beneficiario";
+                  $var_consulta= "SELECT * FROM Beneficiario WHERE Cedula_Beneficiario='$id'";
                   $var_resultado = $Conexion->query($var_consulta);
                   $var_fila=$var_resultado->fetch_array();
 
@@ -66,15 +66,15 @@
                       <option value="PNF en Fonoaudiología">PNF en Fonoaudiología</option>
                       <option value="PNF en Geociencia">PNF en Geociencia</option>
                       <option value="PNF en Historia">PNF en Historia</option>
-                      <option value="PNF en Informática">PNF PNF en Agroalimentaciónnformática</option>
+                      <option value="PNF en Informática">PNF en Informática</option>
                       <option value="PNF en Turismo">PNF en Turismo</option>
                       <option value="Radiología e Imagenología">Radiología e Imagenología</option>
                       <option value="NO APLICA">NO APLICA</option>
                     </select><br>
                   <label for="tipo"><B>Introduzca Correo Electrónico del Usuario: </B></label> 
-                    <input class="input" type="email" name="CorreoBeneficiario" placeholder="Correo Electrónico" value="<?php  echo $var_fila['Correo_Beneficiario'];?>" required>
+                    <input class="input" type="email" name="CorreoU" placeholder="Correo Electrónico" value="<?php  echo $var_fila['Correo_Beneficiario'];?>" required>
                       <div class="btn-form">
-                        <input class="btn-submit" type="submit" value="REGISTRAR">
+                        <input class="btn-submit" type="submit" value="GUARDAR">
                         <input class="btn-reset" type="reset" value="LIMPIAR">
                       </div>
                 </form>

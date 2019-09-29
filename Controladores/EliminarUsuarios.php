@@ -13,13 +13,12 @@ require 'ConexionBaseDatos.php';
 
 /*Confirmar si se realiza*/
 
-	return $conexion -> query($Eliminar)
-
-		if ($resultado) {
-			
-			require '../Vistas/ConsultarUsuarios.php';
+		if ($Conexion->query($Eliminar) === true) {
+			echo "Eliminado Exitosamente";
+			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";
+			echo "<br><br><a href='../Vistas/ConsultarUsuarios.php'>Mostrar Registros</a>";
 		}else{
-			echo "Error";
+			echo "Fallido";
 		}
 		
 ?>

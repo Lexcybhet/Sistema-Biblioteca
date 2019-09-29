@@ -23,6 +23,7 @@ require 'ConexionBaseDatos.php';
 		if ($Conexion->query($Insertar) === true) {
 			echo "Registro Exitoso";
 			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";
+			echo "<br><br><a href='../Vistas/ConsultarBeneficiario.php'>Mostrar Registros</a>";
 		}else{
 			echo "Registro Fallido";
 			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";

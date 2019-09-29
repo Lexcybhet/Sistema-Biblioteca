@@ -22,10 +22,21 @@
       <section class="main container">
         <div class="contenido">
           <BR><HR>
-            <H1 align= "center">Usuario Eliminado Exitosamente</H1>
-          <HR><BR>
+            <H1 align= "center">Consultar Estaciones</H1>
+          <BR>
             <center>
-              <img src="Imagenes/Aprobado.png" width="150" height="170" hspace="5">
+              <table class="datos" border='1' align='center'>
+                <tr bgcolor='#E6E6E6'>
+                  <th>Codigo Equipo</th>
+                  <th>Estado del Equipo</th>
+                  <th>Marca del Equipo</th>
+                </tr>
+                <?php        
+                  include "../Controladores/MostrarEstaciones.php";
+                ?>
+              </table>
+          <br><br>
+          <a href="RegistrarEstacion.php"><input class="btn-submit" type="submit" value="NUEVA ESTACION"></a>
             </center>
         </div>
       </section>

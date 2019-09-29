@@ -26,7 +26,7 @@
               <img src="Vistas/Imagenes/Avatar.png" class="avatar" alt="Avatar Image">
                 <h1>Inicie Sesión</h1>
                   <form action="Controladores/Login.php" method="POST">
-                    <label for="username">ID</label>
+                    <label for="username">Usuario</label>
                       <input type="text" name="Usuario" placeholder="Introduzca su Cedula">
                     <label for="username">Nombre</label>
                       <input type="text" name="Nombre" placeholder="Introduzca su Nombre">

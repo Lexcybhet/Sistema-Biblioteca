@@ -22,6 +22,7 @@ require 'ConexionBaseDatos.php';
 		if ($Conexion->query($Actualizar) === true) {
 			echo "Registro Exitoso";
 			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";
+			echo "<br><br><a href='../Vistas/ConsultarUsuarios.php'>Mostrar Registros</a>";
 		}else{
 			echo "Registro Fallido";
 			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";

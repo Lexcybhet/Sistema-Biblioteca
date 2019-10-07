@@ -11,11 +11,10 @@ require 'ConexionBaseDatos.php';
 	$CedulaU = $_POST['CedulaUsuario'];
 	$CorreoU = $_POST['CorreoUsuario'];
 	$TipoU = $_POST['TipoUsuario'];
-	$ContrasenaU = $_POST['ContrasenaU'];
-	
+		
 /*Metodo Para Actualizar Datos en la Base de Datos*/
 
-	$Actualizar = " UPDATE Usuario SET Cedula_Usuario='$CedulaU', Nombre_Usuario='$NombreU', Apellido_Usuario='$ApellidoU', Tipo_Usuario='$TipoU', Correo_Usuario='$CorreoU', Contrasena='$ContrasenaU' WHERE Cedula_Usuario='$id' ";
+	$Actualizar = " UPDATE Usuario SET Cedula_Usuario='$CedulaU', Nombre_Usuario='$NombreU', Apellido_Usuario='$ApellidoU', Tipo_Usuario='$TipoU', Correo_Usuario='$CorreoU' WHERE Cedula_Usuario='$id' ";
 
 /*Confirmar si se realiza*/
 

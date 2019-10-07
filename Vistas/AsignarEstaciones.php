@@ -26,7 +26,7 @@
           <HR><BR>
             <div class="cont1">
               <div class="form-top">
-                <h2>Registro de <span>Estaciones</span></h2>
+                <h2>Registro de <span>Beneficiario</span></h2>
               </div>
               <?php
               $id=$_REQUEST['Codigo'];
@@ -36,18 +36,19 @@
                         $var_fila=$var_resultado->fetch_array();
                                   
               ?>
-                <form class="form-reg" action="../Controladores/ModificarEstacion.php?Codigo=<?php echo $var_fila ['Codigo']; ?>" id="Estaciones" name="Estaciones" method="POST">
-                  <label for="tipo"><B>Introduzca Codigo del Equipo: </B></label> 
-                    <input class="input" type="text" name="CodigoEquipo" placeholder="Codigo" value="<?php  echo $var_fila['Codigo'];?>" required autofocus>
-                  <label for="sexo"><B>Seleccione el Estado del Equipo:</B></label><br> 
-                    <select name="EstadoEquipo" value="<?php  echo $var_fila['Estado'];?>">
-                      <option value="FUNCIONAL">Funcional</option>
-                      <option value="FUERA DE SERVICIO">Fuera de Servicio</option>
-                    </select><br>
-                  <label for="tipo"><B>Introduzca Marca del Equipo: </B></label> 
-                    <input class="input" type="text" name="MarcaEquipo" placeholder="Marca" value="<?php  echo $var_fila['Marca'];?>" required autofocus> 
+                <form class="form-reg" action="../Controladores/AsignarBeneficiario.php" id="Estaciones" name="Estaciones" method="POST">
+                  <label for="tipo"><B>Introduzca Hora de Entrada del Beneficiario: </B></label> 
+                    <input class="input" type="datetime-local" name="EntradaB" placeholder="Hora de Entrada" required autofocus>
+                  <label for="tipo"><B>Introduzca Hora de Salida del Beneficiario: </B></label> 
+                    <input class="input" type="datetime-local" name="SalidaB" placeholder="Hora de Salida" required autofocus>
+                  <label for="tipo"><B>Introduzca Cedula del Usuario: </B></label> 
+                    <input class="input" type="text" name="IdUsuario" placeholder="Cedula Usuario" required autofocus>
+                  <label for="tipo"><B>Introduzca Codigo de la Estación: </B></label> 
+                    <input class="input" type="text" name="IdEstacion" placeholder="Codigo de Estación" value="<?php  echo $var_fila['Codigo'];?>" required autofocus>                    
+                  <label for="tipo"><B>Introduzca Cedula del Beneficiario: </B></label> 
+                    <input class="input" type="text" name="IdBeneficiario" placeholder="Cedula Beneficiario" required autofocus>
                       <div class="btn-form">
-                        <input class="btn-submit" type="submit" value="GUARDAR">
+                        <input class="btn-submit" type="submit" value="ASIGNAR">
                         <input class="btn-reset" type="reset" value="LIMPIAR">
                       </div>
                 </form>

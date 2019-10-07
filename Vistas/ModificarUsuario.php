@@ -50,8 +50,6 @@
                     <option value="ADMINISTRADOR">ADMINISTRADOR</option>
                     <option value="ENCARGADO">ENCARGADO</option>
                   </select><br>
-                    <label for="tipo"><B>Introduzca Contraseña Usuario: </B></label> 
-                     <input class="input" type="password" name="ContrasenaU" placeholder="Contraseña" values="<?php  echo $var_fila['Contrasena'];?>" required >
                       <div class="btn-form">
                         <input class="btn-submit" type="submit" value="GUARDAR">
                         <input class="btn-reset" type="reset" value="LIMPIAR">

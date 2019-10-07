@@ -7,14 +7,18 @@
       if($var_resultado->num_rows>0){
         while ($var_fila=$var_resultado->fetch_array())
           {
-?>
-           <tr>
-              <td><?php echo $var_fila["Codigo"]; ?></td>
-              <td><?php echo $var_fila["Estado"]; ?></td>
-              <td><?php echo $var_fila["Marca"]; ?></td>
-              <td><a href="ModificarEstacion.php?Codigo=<?php echo $var_fila ['Codigo']; ?>"><span class='icon-pencil'></span></a></td>
-              <td><a href="../Controladores/EliminarEstaciones.php?Codigo=<?php echo $var_fila['Codigo']; ?>"><span class='icon-bin'></span></a></td>
-            </tr>
+?>           
+              <div class="tabla-m">
+                <center><h3>Estacion: <?php echo $var_fila["Codigo"]; ?></h3>
+                <img style="float:left; margin:30px;" src="Imagenes/Equipo.png" width="100" height="100">
+                <p align="left">
+                  <strong>Marca: </strong><?php echo $var_fila["Marca"]; ?><br>
+                  <strong>Estado del Equipo: </strong><?php echo $var_fila["Estado"]; ?><br><br>
+                  <a href="AsignarEstaciones.php?Codigo=<?php echo $var_fila['Codigo']; ?>"class="btn btn-primary" title="Asignar Beneficiario"><span class="icon-user-plus"></span></a>
+                  <a href="ModificarEstacion.php?Codigo=<?php echo $var_fila ['Codigo']; ?>" class="btn btn-primary" title="Modificar Estacion"><span class='icon-pencil'></span></a>
+                  <a href="../Controladores/EliminarEstaciones.php?Codigo=<?php echo $var_fila['Codigo']; ?>"class="btn btn-primary" title="Eliminar Estacion"><span class='icon-bin'></span></a>
+                </p></center>
+              </div><br>
 <?php               
           }
       }

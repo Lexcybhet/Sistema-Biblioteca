@@ -27,13 +27,10 @@
                 <h1>Inicie Sesión</h1>
                   <form action="Controladores/Login.php" method="POST">
                     <label for="username">Usuario</label>
-                      <input type="text" name="Usuario" placeholder="Introduzca su Cedula">
+                      <input type="text" name="Usuario" value="" placeholder="Introduzca su Cedula" />
                     <label for="username">Nombre</label>
-                      <input type="text" name="Nombre" placeholder="Introduzca su Nombre">
-                    <label for="password">Contraseña</label>
-                      <input type="password" name="Contrasena" placeholder="Introduzca su Contraseña">
+                      <input type="password" name="Contrasena" value="" placeholder="Introduzca su Contraseña" />
                       <input type="submit" value="Ingresar">
-                      <br><br>
                       <a href="#">Crear Usuario</a><br>
                       <a href="#">¿Olvido su Contraseña?</a>
                   </form>

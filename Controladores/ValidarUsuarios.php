@@ -1,5 +1,4 @@
 <?php  
-
 	if (isset($_POST['submit'])) {
 		if (empty($Nombre)) {
 			echo "<p class='error'>Campo vacio, agregar nombre</p>";

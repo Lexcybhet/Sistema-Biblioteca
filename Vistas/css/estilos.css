@@ -232,7 +232,7 @@ h2 span{
 }
 
 .tabla-m {
- max-width: 600px;
+ max-width: 100px;
  height: auto;
  background-color: #efefef;
  margin: 1% auto;
@@ -367,4 +367,3 @@ tr:nth-child(even){
 .error {
   color: red;
 }
-

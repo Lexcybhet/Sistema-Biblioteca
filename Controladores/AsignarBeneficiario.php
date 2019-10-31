@@ -13,7 +13,8 @@ require 'ConexionBaseDatos.php';
 
 /*Metodo Para Introducir Datos en la Base de Datos*/
 
-	$Insertar = " INSERT INTO 'Registros' ('Hora_Entrada', 'Hora_Salida', 'IdUsuario', 'idEstacion', 'IdBeneficiario') VALUES ('$HEntrada', '$HSalida', '$CedulaU', '$CodigoE', '$CedulaB') ";
+	$Insertar = " INSERT INTO `Registros` (`id`, `Hora_Entrada`, `Hora_Salida`, `IdUsuario`, `idEstacion`, `IdBeneficiario`) VALUES (NULL, '$HEntrada', '$HSalida', '$CedulaU', '$CodigoE', '$CedulaB')";
+
 
 /*Confirmar si se realiza*/
 

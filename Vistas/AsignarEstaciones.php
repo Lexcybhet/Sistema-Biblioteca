@@ -1,3 +1,6 @@
+<?php
+  require '../Controladores/VerificarSesion.php'
+?>
 <!DOCTYPE html>
 <HTML lang="es">
 <HEAD>
@@ -30,7 +33,7 @@
               </div>
               <?php
               $id=$_REQUEST['Codigo'];
-                 require '../Controladores/ConexionBaseDatos.php';
+                  require '../Controladores/ConexionBaseDatos.php';
                       $var_consulta= "SELECT * FROM Estaciones WHERE Codigo='$id'";
                         $var_resultado = $Conexion->query($var_consulta);
                         $var_fila=$var_resultado->fetch_array();

@@ -28,7 +28,7 @@
                   <form action="Controladores/Login.php" method="POST">
                     <label for="username">Usuario</label>
                       <input type="text" name="Usuario" value="" placeholder="Introduzca su Cedula" />
-                    <label for="username">Nombre</label>
+                    <label for="username">Contraseña</label>
                       <input type="password" name="Contrasena" value="" placeholder="Introduzca su Contraseña" />
                       <input type="submit" value="Ingresar">
                       <a href="#">Crear Usuario</a><br>

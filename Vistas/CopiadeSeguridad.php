@@ -1,3 +1,15 @@
+<?php 
+
+  require '../Controladores/VerificarSesion.php';
+  if (isset($_POST['submit'])) {
+    $Nombre =$_POST['NombreUsuario'];
+    $Apellido =$_POST['ApellidoUsuario'];
+    $Cedula =$_POST['CedulaUsuario'];
+    $Correo =$_POST['CorreoUsuario'];
+    $Contra =$_POST['Contrasena'];
+  }
+
+?>
 <!DOCTYPE html>
 <HTML lang="es">
 <HEAD>
@@ -24,24 +36,18 @@
           <BR><HR>
             <H1 align= "center">ÁREA DE CONSULTA ELECTRÓNICA E INTERNET</H1>
           <HR><BR>
-            <div class="login-box">
-              <img src="Imagenes/Avatar.png" class="avatar" alt="Avatar Image">
-                <h1>Inicie Sesión</h1>
-                  <form action="../Controladores/Login.php" method="POST">
-                    <label for="username">ID</label>
-                      <input type="text" name="Usuario" placeholder="Introduzca su Cedula">
-                    <label for="username">Nombre</label>
-                      <input type="text" name="Nombre" placeholder="Introduzca su Nombre">
-                    <label for="password">Contraseña</label>
-                      <input type="password" name="Contrasena" placeholder="Introduzca su Contraseña">
-                      <input type="submit" value="Ingresar">
-                      <br><br>
-                      <a href="#">Crear Usuario</a><br>
-                      <a href="#">¿Olvido su Contraseña?</a>
-                  </form>
+           <div class="cont1">
+            <div class="form-top">
+              <h2>Copia de <span>Seguridad</span></h2>
             </div>
-            <br><br>
-          
+                <center>¿Desea Crear una Copia de Seguridad?</center>
+                      <div class="btn-form">
+                        <a href="../Controladores/RespaldoBD.php"><div class="btn-submit"><center>SI</center></a>
+                        </div>
+                        <a href="Inicio.php"><div class="btn-reset"><center>NO</center></a></div>                        
+                      </div>
+              </form>
+          </div>
         </div>
       </section>
 <!-- Scripts -->

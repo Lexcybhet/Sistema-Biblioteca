@@ -1,3 +1,6 @@
+<?php
+  require '../Controladores/VerificarSesion.php'
+?>
 <!DOCTYPE html>
 <HTML lang="es">
 <HEAD>

@@ -1,3 +1,6 @@
+<?php
+  require '../Controladores/VerificarSesion.php'
+?>
 <!DOCTYPE html>
 <HTML lang="es">
 <HEAD>
@@ -30,10 +33,13 @@
                 <a href=""><h3><span class="icon-stats-dots"></span>Estadisticas</h3></a>
               </div>
               <div class="boton-menu">
-                <a href="#"><h3><span class="icon-cloud-download"></span>Copia de Seguridad</h3></a>
+                <a href="CopiadeSeguridad.php"><h3><span class="icon-cloud-download"></span>Copia de Seguridad</h3></a>
               </div>
               <div class="boton-menu">
                 <a href=""><h3><span class="icon-database"></span>Restaurar Base de Datos</h3></a>
+              </div>              
+              <div class="boton-menu">
+                <a href="Bitacora.php"><h3><span class="icon-database"></span>Bitacora</h3></a>
               </div>
             </div>
           <br>

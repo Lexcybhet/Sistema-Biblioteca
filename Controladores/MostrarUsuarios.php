@@ -1,8 +1,10 @@
 <?php
 /*Llamado a la base de datos*/ 
+  
   require 'ConexionBaseDatos.php';
+
 /*Metodo para Mostrar datos*/    
-    $var_consulta= "SELECT * FROM Usuario";
+    $var_consulta= "SELECT * FROM Usuario ORDER BY Cedula_Usuario";
     $var_resultado = $Conexion->query($var_consulta);
       if($var_resultado->num_rows>0){
         while ($var_fila=$var_resultado->fetch_array())

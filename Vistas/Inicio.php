@@ -1,3 +1,6 @@
+<?php
+  require '../Controladores/VerificarSesion.php'
+?>
 <!DOCTYPE html>
 <HTML lang="es">
 <HEAD>
@@ -22,20 +25,6 @@
       <section class="main container">
         <div class="contenido">
           <img style="float:left; margin:5px;" src="Imagenes/Libros.png" width="300" height="400"><H1 align= "center"><br><br><br>BIENVENIDOS AL SISTEMA DE CONTROL DE ACCESO DEL ÁREA DE CONSULTA ELECTRÓNICA E INTERNET<BR></H1>
-            <section>
-              <h1>
-                <?php 
-                  session_start();
-                    if (isset($_SESSION['u_usuario'])) {
-                      echo "Usuario ";       
-                    }
-                    else {
-                      //require '../Index.php';
-                    }
-                
-                ?> 
-              </h1>
-            </section>  
         </div>
       </section>
 <!-- Scripts -->

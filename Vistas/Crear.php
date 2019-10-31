@@ -1,5 +1,6 @@
 <?php 
 
+  require '../Controladores/VerificarSesion.php';
   if (isset($_POST['submit'])) {
     $Nombre =$_POST['NombreUsuario'];
     $Apellido =$_POST['ApellidoUsuario'];
@@ -49,8 +50,8 @@
                 <label for="tipo"><B>Introduzca Correo Electrónico del Usuario: </B></label> 
                   <input class="input" type="email" name="CorreoUsuario" placeholder="Correo Electrónico" required>
                 <label for="tipo"><B>Seleccione tipo de usuario: </B></label><br>
-                  <select name="TipoUsuario">
-                    <option value=""></option>
+                  <select name="TipoUsuario" required>
+                    <option value="">Seleccione una opcion</option>
                     <option value="ADMINISTRADOR">ADMINISTRADOR</option>
                     <option value="ENCARGADO">ENCARGADO</option>
                   </select><br>

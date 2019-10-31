@@ -10,6 +10,7 @@
 <!-- Llamado a los Estilos -->  
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/fonts.css">
 </HEAD>
 <BODY>
@@ -25,13 +26,15 @@
       <section class="main container">
         <div class="contenido">
           <BR><HR>
-            <H1 align= "center">Consultar Estaciones</H1>
+            <H1 align= "center">Bitacora de Registros</H1>
           <BR>
                 <?php        
-                  include "../Controladores/MostrarEstaciones.php";
-                ?>              
-          <br>
-       <center><a href="RegistrarEstacion.php"><input class="btn-submit" type="submit" value="NUEVA ESTACION"></a></center>
+                  include "../Controladores/BitacoraRegistros.php";
+                ?>
+              </table>
+          <br><br>
+          <a href="Crear.php"><input class="btn-submit" type="submit" value="NUEVO USUARIO"></a>
+            </center>
         </div>
       </section>
 <!-- Scripts -->

@@ -1,6 +1,8 @@
 <?php
 /*Llamado a la base de datos*/
+
   require 'ConexionBaseDatos.php';
+
 /*Metodo para Mostrar datos*/    
   	$var_consulta= "SELECT * FROM Beneficiario";
     $var_resultado = $Conexion->query($var_consulta);

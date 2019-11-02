@@ -29,15 +29,15 @@
           <HR><BR>            
             <div class="tabla-m">
               <br>
-                <font class="Buscador" action="../Controladores/ModificarUsuario.php?Cedula_Usuario=<?php echo $var_fila ['Cedula_Usuario']; ?>" id="EliminarU" name="Eliminar" method="POST">
+                <form class="Buscador" action="ModificarUsuarioF.php" name="Consultar" method="POST">
                 <fieldset>
                   <p>Introduzca la Cedula del Usuario</p>
-                  <input class="input" type="search" name="Buscador" placeholder="Buscar..." name="btn_eliminar">
+                  <input class="input" type="search" name="Buscador" placeholder="Buscar..." />
                     <button type="submit">
-                      <a href="../Controladores/ModificarUsuario.php?Cedula_Usuario=<?php echo $var_fila ['Cedula_Usuario']; ?>"><span class="icon-search"></span></a>
+                      <a href=""><span class="icon-search"></span></a>
                     </button>
                 </fieldset>
-              </font>
+              </form>
             </div>
           
         </div>

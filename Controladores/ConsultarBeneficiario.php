@@ -29,7 +29,7 @@
           <HR><BR>            
             <div class="tabla-m">
               <br>
-                <form class="Buscador" action="BuscarBeneficiarios.php" name="Consultar" method="POST">
+                <form class="Buscador" action="ConsultarBeneficiario.php" name="Consultar" method="POST">
                 <fieldset>
                   <p>Introduzca la Cedula del Beneficiario</p>
                   <input class="input" type="search" name="Buscador" placeholder="Buscar..." />

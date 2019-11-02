@@ -1,5 +1,5 @@
 <?php
-  require '../Controladores/VerificarSesion.php'
+  require '../Controladores/VerificarSesion.php';
 ?>
 <!DOCTYPE html>
 <HTML lang="es">
@@ -26,23 +26,19 @@
         <div class="contenido">
           <BR><HR>
             <H1 align= "center">Consultar Usuario</H1>
-          <BR>
-            <center>
-              <table class="datos" border='1' align='center'>
-                <tr bgcolor='#E6E6E6'>
-                  <th>Cedula Usuario</th>
-                  <th>Nombre Usuario</th>
-                  <th>Apellido Usuario</th>
-                  <th>Tipo de Usuario</th>
-                  <th>Correo del Usuario</th>
-                </tr>
-                <?php        
-                  include "../Controladores/MostrarUsuarios.php";
-                ?>
-              </table>
-          <br><br>
-          <a href="Crear.php"><input class="btn-submit" type="submit" value="NUEVO USUARIO"></a>
-            </center>
+          <HR><BR>            
+            <div class="tabla-m">
+              <br>
+                <form class="Buscador" action="BuscarUsuarios.php" name="Consultar" method="POST">
+                <fieldset>
+                  <p>Introduzca la Cedula del Usuario</p>
+                  <input class="input" type="search" name="Buscador" placeholder="Buscar..." />
+                    <button type="submit">
+                      <a href=""><span class="icon-search"></span></a>
+                    </button>
+                </fieldset>
+              </form>
+            </div>
         </div>
       </section>
 <!-- Scripts -->

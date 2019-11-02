@@ -1,5 +1,5 @@
 <?php
-  require '../Controladores/VerificarSesion.php';
+  require '../Controladores/VerificarSesion.php'
 ?>
 <!DOCTYPE html>
 <HTML lang="es">
@@ -25,11 +25,11 @@
       <section class="main container">
         <div class="contenido">
           <BR><HR>
-            <H1 align= "center">Consultar Beneficiario</H1>
+            <H1 align= "center">Eliminar Beneficiario</H1>
           <HR><BR>            
             <div class="tabla-m">
               <br>
-                <form class="Buscador" action="BuscarBeneficiarios.php" name="Consultar" method="POST">
+                <form class="Buscador" action="" id="EliminarB" name="Eliminar" method="POST">
                 <fieldset>
                   <p>Introduzca la Cedula del Beneficiario</p>
                   <input class="input" type="search" name="Buscador" placeholder="Buscar..." />

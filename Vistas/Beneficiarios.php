@@ -36,7 +36,7 @@
                 <a href="ConsultarBeneficiario.php"><h3><span class="icon-search"></span>Consultar Beneficiarios</h3></a>
               </div>
               <div class="boton-menu">
-                <a href=""><h3><span class="icon-pencil"></span>Modificar Beneficiarios</h3></a>
+                <a href="ModificarBeneficiario2.php"><h3><span class="icon-pencil"></span>Modificar Beneficiarios</h3></a>
               </div>
               <div class="boton-menu">
                 <a href="EliminarBeneficiario.html"><h3><span class="icon-user-minus"></span>Eliminar Beneficiarios</h3></a>

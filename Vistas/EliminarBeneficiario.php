@@ -29,7 +29,7 @@
           <HR><BR>            
             <div class="tabla-m">
               <br>
-                <form class="Buscador" action="" id="EliminarB" name="Eliminar" method="POST">
+                <form class="Buscador" action="EliminarBeneficiarioC.php" name="Consultar" method="POST">
                 <fieldset>
                   <p>Introduzca la Cedula del Beneficiario</p>
                   <input class="input" type="search" name="Buscador" placeholder="Buscar..." />
@@ -39,6 +39,7 @@
                 </fieldset>
               </form>
             </div>
+          
         </div>
       </section>
 <!-- Scripts -->

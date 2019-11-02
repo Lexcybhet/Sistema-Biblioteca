@@ -1,5 +1,8 @@
-<?php
-  require '../Controladores/VerificarSesion.php'
+<?php 
+
+  require '../Controladores/VerificarSesion.php';
+  $id=$_POST['Buscador'];  
+
 ?>
 <!DOCTYPE html>
 <HTML lang="es">
@@ -25,25 +28,20 @@
       <section class="main container">
         <div class="contenido">
           <BR><HR>
-            <H1 align= "center">Usuarios</H1>
-          <BR>
-            <div class="tabla-m">
-              <br>
-              <div class="boton-menu">
-                <a href="Crear.php"><h3><span class="icon-user-plus"></span>Crear Usuarios</h3></a>
-              </div>
-              <div class="boton-menu">
-                <a href="ConsultarUsuarios.php"><h3><span class="icon-search"></span>Consultar Usuarios</h3></a>
-              </div>
-              <div class="boton-menu">
-                <a href="ModificarUsuario2.php"><h3><span class="icon-pencil"></span>Modificar Usuarios</h3></a>
-              </div>
-              <div class="boton-menu">
-                <a href="EliminarUsuario.php"><h3><span class="icon-user-minus"></span>Eliminar Usuarios</h3></a>
-              </div>
+            <H1 align= "center">ÁREA DE CONSULTA ELECTRÓNICA E INTERNET</H1>
+          <HR><BR>
+           <div class="cont1">
+            <div class="form-top">
+              <h2>Eliminar <span>Beneficiario</span></h2>
             </div>
-          <br>
-          
+                <center>¿Desea Eliminar el Beneficiario?</center>
+                      <div class="btn-form">
+                        <a href="../Controladores/EliminarBeneficiarios.php?Cedula_Beneficiario=<?php echo $_POST['Buscador']; ?>"><div class="btn-submit"><center>SI</center></a>
+                        </div>
+                        <a href="Inicio.php"><div class="btn-reset"><center>NO</center></a></div>                        
+                      </div>
+              </form>
+          </div>
         </div>
       </section>
 <!-- Scripts -->

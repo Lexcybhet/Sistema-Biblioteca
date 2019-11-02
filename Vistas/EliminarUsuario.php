@@ -25,24 +25,20 @@
       <section class="main container">
         <div class="contenido">
           <BR><HR>
-            <H1 align= "center">Usuarios</H1>
-          <BR>
+            <H1 align= "center">Eliminar Usuario</H1>
+          <HR><BR>            
             <div class="tabla-m">
               <br>
-              <div class="boton-menu">
-                <a href="Crear.php"><h3><span class="icon-user-plus"></span>Crear Usuarios</h3></a>
-              </div>
-              <div class="boton-menu">
-                <a href="ConsultarUsuarios.php"><h3><span class="icon-search"></span>Consultar Usuarios</h3></a>
-              </div>
-              <div class="boton-menu">
-                <a href="ModificarUsuario2.php"><h3><span class="icon-pencil"></span>Modificar Usuarios</h3></a>
-              </div>
-              <div class="boton-menu">
-                <a href="EliminarUsuario.php"><h3><span class="icon-user-minus"></span>Eliminar Usuarios</h3></a>
-              </div>
+                <form class="Buscador" action="EliminarUsuarioC.php" name="Consultar" method="POST">
+                <fieldset>
+                  <p>Introduzca la Cedula del Usuario</p>
+                  <input class="input" type="search" name="Buscador" placeholder="Buscar..." />
+                    <button type="submit">
+                      <a href=""><span class="icon-search"></span></a>
+                    </button>
+                </fieldset>
+              </form>
             </div>
-          <br>
           
         </div>
       </section>

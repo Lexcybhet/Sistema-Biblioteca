@@ -24,7 +24,7 @@
     <!-- Contenido -->
       <section class="main container">
         <div class="contenido">
-          <img style="float:left; margin:5px;" src="Imagenes/Libros.png" width="300" height="400"><H1 align= "center"><br><br><br>BIENVENIDOS AL SISTEMA DE CONTROL DE ACCESO DEL ÁREA DE CONSULTA ELECTRÓNICA E INTERNET<BR></H1>
+          <img style="float:left; margin:5px;" src="Imagenes/Libros.png" width="300" height="300"><H1 align= "center"><br>BIENVENIDOS AL SISTEMA DE CONTROL DE ACCESO DEL ÁREA DE CONSULTA ELECTRÓNICA E INTERNET<BR></H1>
         </div>
       </section>
 <!-- Scripts -->

@@ -19,12 +19,9 @@ require 'ConexionBaseDatos.php';
 /*Confirmar si se realiza*/
 
 		if ($Conexion->query($Actualizar) === true) {
-			echo "Registro Exitoso";
-			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";
-			echo "<br><br><a href='../Vistas/ConsultarUsuarios.php'>Mostrar Registros</a>";
+			header('Location: ../Vistas/AprobadoRU.php');
 		}else{
-			echo "Registro Fallido";
-			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";
+			header('Location: ../Vistas/FallidoRU.php');
 		}
 		
 ?>

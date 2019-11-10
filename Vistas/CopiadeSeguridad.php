@@ -1,12 +1,8 @@
 <?php 
 
   require '../Controladores/VerificarSesion.php';
-  if (isset($_POST['submit'])) {
-    $Nombre =$_POST['NombreUsuario'];
-    $Apellido =$_POST['ApellidoUsuario'];
-    $Cedula =$_POST['CedulaUsuario'];
-    $Correo =$_POST['CorreoUsuario'];
-    $Contra =$_POST['Contrasena'];
+  if ($_SESSION['TipoU'] != 1) {
+    header('Location: ../Vistas/Acceso.php');
   }
 
 ?>

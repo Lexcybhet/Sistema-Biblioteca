@@ -14,11 +14,9 @@ require 'ConexionBaseDatos.php';
 /*Confirmar si se realiza*/
 
         if ($Conexion->query($Eliminar) === true) {
-			echo "Eliminado Exitosamente";
-			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";
-			echo "<br><br><a href='../Vistas/ConsultarBeneficiario.php'>Mostrar Registros</a>";
+			header('Location: ../Vistas/AprobadoE.php');
         }else{
-            echo "Fallido";
+            header('Location: ../Vistas/FallidoE.php');
         }
         
 ?>

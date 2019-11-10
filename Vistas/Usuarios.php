@@ -1,5 +1,8 @@
 <?php
-  require '../Controladores/VerificarSesion.php'
+  require '../Controladores/VerificarSesion.php';
+  if ($_SESSION['TipoU'] != 1) {
+    header('Location: ../Vistas/Acceso.php');
+  }
 ?>
 <!DOCTYPE html>
 <HTML lang="es">
@@ -24,7 +27,7 @@
     <!-- Contenido -->
       <section class="main container">
         <div class="contenido">
-          <BR><HR>
+          <HR>
             <H1 align= "center">Usuarios</H1>
           <BR>
             <div class="tabla-m">

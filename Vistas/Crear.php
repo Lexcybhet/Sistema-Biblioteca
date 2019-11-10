@@ -1,14 +1,10 @@
 <?php 
 
   require '../Controladores/VerificarSesion.php';
-  if (isset($_POST['submit'])) {
-    $Nombre =$_POST['NombreUsuario'];
-    $Apellido =$_POST['ApellidoUsuario'];
-    $Cedula =$_POST['CedulaUsuario'];
-    $Correo =$_POST['CorreoUsuario'];
-    $Contra =$_POST['Contrasena'];
+  if ($_SESSION['TipoU'] != 1) {
+    header('Location: ../Vistas/Acceso.php');
   }
-
+    
 ?>
 <!DOCTYPE html>
 <HTML lang="es">
@@ -40,32 +36,27 @@
             <div class="form-top">
               <h2>Registro de <span>Usuario</span></h2>
             </div>
-              <form class="form-reg" action="../Controladores/CrearUsuario.php" id="Usuario" name="Usuario" method="POST">
+              <form class="form-reg" action="../Controladores/CrearUsuario.php" id="Usuario" name="Usuario" method="POST" autocomplete="off">
                 <label for="tipo"><B>Introduzca Nombre del Usuario: </B></label>
-                  <input class="input" type="text" name="NombreUsuario" placeholder="Nombre" required autofocus>
+                  <input class="input" type="text" name="NombreUsuario" placeholder="Nombre" required autofocus maxlength="15">
                 <label for="tipo"><B>Introduzca Apellido del Usuario: </B></label> 
-                  <input class="input" type="text" name="ApellidoUsuario" placeholder="Apellidos" required autofocus>
+                  <input class="input" type="text" name="ApellidoUsuario" placeholder="Apellidos" required autofocus maxlength="15">
                 <label for="tipo"><B>Introduzca Cedula del Usuario: </B></label> 
-                  <input class="input" type="text" name="CedulaUsuario" placeholder="Cedula" required >
+                  <input class="input" type="text" name="CedulaUsuario" placeholder="Cedula" required maxlength="10">
                 <label for="tipo"><B>Introduzca Correo Electrónico del Usuario: </B></label> 
                   <input class="input" type="email" name="CorreoUsuario" placeholder="Correo Electrónico" required>
                 <label for="tipo"><B>Seleccione tipo de usuario: </B></label><br>
                   <select name="TipoUsuario" required>
                     <option value="">Seleccione una opcion</option>
-                    <option value="ADMINISTRADOR">ADMINISTRADOR</option>
-                    <option value="ENCARGADO">ENCARGADO</option>
+                    <option value="1">ADMINISTRADOR</option>
+                    <option value="2">ENCARGADO</option>
                   </select><br>
                     <label for="tipo"><B>Introduzca Contraseña Usuario: </B></label> 
-                     <input class="input" type="password" name="Contrasena" placeholder="Contraseña" required >
+                     <input class="input" type="password" name="Contrasena" placeholder="Contraseña" required maxlength="15">
                       <div class="btn-form">
                         <input class="btn-submit" type="submit" value="REGISTRAR">
                         <input class="btn-reset" type="reset" value="LIMPIAR">
                       </div>
-                  <?php  
-
-                    include "../Controladores/ValidarUsuarios.php";
-
-                  ?>    
               </form>
           </div>
         </div>

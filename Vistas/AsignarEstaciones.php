@@ -39,15 +39,19 @@
                         $var_fila=$var_resultado->fetch_array();
                                   
               ?>
-                <form class="form-reg" action="../Controladores/AsignarBeneficiario.php" id="Estaciones" name="Estaciones" method="POST">
+                <form class="form-reg" action="../Controladores/AsignarBeneficiario.php" id="Estaciones" name="Estaciones" method="POST" autocomplete="off">
+                  <label for="tipo"><B>Introduzca Fecha de Entrada del Beneficiario: </B></label> 
+                    <input class="input" type="date" name="EntradaFB" value="<?php echo date('Y-m-d'); ?>"  required autofocus>
                   <label for="tipo"><B>Introduzca Hora de Entrada del Beneficiario: </B></label> 
-                    <input class="input" type="datetime-local" name="EntradaB" placeholder="Hora de Entrada" required autofocus>
+                    <input class="input" type="time" name="EntradaB" value="<?php echo date('H:i:s'); ?>"  required autofocus>
                   <label for="tipo"><B>Introduzca Hora de Salida del Beneficiario: </B></label> 
-                    <input class="input" type="datetime-local" name="SalidaB" placeholder="Hora de Salida" required autofocus>
+                    <input class="input" type="time" name="SalidaB" placeholder="Hora de Salida" value="<?php $date = new DateTime();
+                      $date->modify('+30 minute');
+                      echo $date->format('H:i:s'); ?>" required autofocus>
                   <label for="tipo"><B>Introduzca Cedula del Usuario: </B></label> 
-                    <input class="input" type="text" name="IdUsuario" placeholder="Cedula Usuario" required autofocus>
+                    <input class="input" type="text" name="IdUsuario" placeholder="Cedula Usuario" required autofocus value="<?php  echo $_SESSION['User'];?>" readonly="">
                   <label for="tipo"><B>Introduzca Codigo de la Estación: </B></label> 
-                    <input class="input" type="text" name="IdEstacion" placeholder="Codigo de Estación" value="<?php  echo $var_fila['Codigo'];?>" required autofocus>                    
+                    <input class="input" type="text" name="IdEstacion" placeholder="Codigo de Estación" value="<?php  echo $var_fila['Codigo'];?>" required autofocus readonly>                    
                   <label for="tipo"><B>Introduzca Cedula del Beneficiario: </B></label> 
                     <input class="input" type="text" name="IdBeneficiario" placeholder="Cedula Beneficiario" required autofocus>
                       <div class="btn-form">

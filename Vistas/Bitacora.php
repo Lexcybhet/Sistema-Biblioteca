@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/barra.css">
   <link rel="stylesheet" type="text/css" href="css/fonts.css">
 </HEAD>
 <BODY>

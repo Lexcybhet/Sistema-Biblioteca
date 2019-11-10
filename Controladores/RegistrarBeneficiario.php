@@ -13,20 +13,18 @@ require 'ConexionBaseDatos.php';
 	$TipoB = $_POST['TipoBeneficiario'];
 	$CarreraB = $_POST['CarreraBeneficiario'];
 	$CorreoB = $_POST['CorreoBeneficiario'];
+	$EstadoB = '1';
 
 /*Metodo Para Introducir Datos en la Base de Datos*/
 
-	$Insertar = " INSERT INTO Beneficiario VALUES ('$CedulaB', '$NombreB', '$ApellidoB', '$GeneroB', '$TipoB', '$CarreraB', '$CorreoB') ";
+	$Insertar = " INSERT INTO Beneficiario VALUES ('$CedulaB', '$NombreB', '$ApellidoB', '$GeneroB', '$TipoB', '$CarreraB', '$CorreoB', '$EstadoB') ";
 
 /*Confirmar si se realiza*/
 
 		if ($Conexion->query($Insertar) === true) {
-			echo "Registro Exitoso";
-			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";
-			echo "<br><br><a href='../Vistas/ConsultarBeneficiario.php'>Mostrar Registros</a>";
+			header('Location: ../Vistas/AprobadoRB.php');
 		}else{
-			echo "Registro Fallido";
-			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";
+			header('Location: ../Vistas/FallidoRB.php');
 		}
 		
 ?>

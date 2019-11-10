@@ -1,5 +1,8 @@
 <?php
-  require '../Controladores/VerificarSesion.php'
+  require '../Controladores/VerificarSesion.php';
+  if ($_SESSION['TipoU'] != 1) {
+    header('Location: ../Vistas/Acceso.php');
+  }
 ?>
 <!DOCTYPE html>
 <HTML lang="es">
@@ -29,7 +32,7 @@
           <HR><BR>            
             <div class="tabla-m">
               <br>
-                <form class="Buscador" action="EliminarUsuarioC.php" name="Consultar" method="POST">
+                <form class="Buscador" action="EliminarUsuarioC.php" name="Consultar" method="POST" autocomplete="off">
                 <fieldset>
                   <p>Introduzca la Cedula del Usuario</p>
                   <input class="input" type="search" name="Buscador" placeholder="Buscar..." />

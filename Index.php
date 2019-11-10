@@ -25,14 +25,18 @@
             <div class="login-box">
               <img src="Vistas/Imagenes/Avatar.png" class="avatar" alt="Avatar Image">
                 <h1>Inicie Sesión</h1>
-                  <form action="Controladores/Login.php" method="POST">
+                  <form action="Controladores/Login.php" method="POST" autocomplete="off">
                     <label for="username">Usuario</label>
-                      <input type="text" name="Usuario" value="" placeholder="Introduzca su Cedula" />
+                      <input type="text" name="Usuario" value="" placeholder="Introduzca su Cedula" max="10" />
                     <label for="username">Contraseña</label>
-                      <input type="password" name="Contrasena" value="" placeholder="Introduzca su Contraseña" />
+                      <input type="password" name="Contrasena" value="" placeholder="Introduzca su Contraseña"  maxlength="15" />
+                    <label for="tipo"><B>Seleccione tipo de usuario: </B></label><br>
+                    <select name="TipoUsuario" required>
+                    <option value="">Seleccione una opcion</option>
+                    <option value="1">ADMINISTRADOR</option>
+                    <option value="2">ENCARGADO</option>
+                    </select><br><br>
                       <input type="submit" value="Ingresar">
-                      <a href="#">Crear Usuario</a><br>
-                      <a href="#">¿Olvido su Contraseña?</a>
                   </form>
             </div>
             <br><br>

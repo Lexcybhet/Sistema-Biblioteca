@@ -24,7 +24,7 @@
     <!-- Contenido -->
       <section class="main container">
         <div class="contenido">
-          <BR><HR>
+          <HR>
             <H1 align= "center">Consultar Estaciones</H1>
           <BR>
                 <?php        

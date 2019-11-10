@@ -10,7 +10,7 @@ require 'ConexionBaseDatos.php';
 	$CedulaU = $_POST['CedulaUsuario'];
 	$CorreoU = $_POST['CorreoUsuario'];
 	$TipoU = $_POST['TipoUsuario'];
-	$ContrasenaU = $_POST['Contrasena'];
+	$ContrasenaU = md5($_POST['Contrasena']);
 
 /*Metodo Para Introducir Datos en la Base de Datos*/
 
@@ -19,12 +19,9 @@ require 'ConexionBaseDatos.php';
 /*Confirmar si se realiza*/
 
 		if ($Conexion->query($Insertar) === true) {
-			echo "Registro Exitoso";
-			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";
-			echo "<br><br><a href='../Vistas/ConsultarUsuarios.php'>Mostrar Registros</a>";
+			header('Location: ../Vistas/AprobadoRU.php');
 		}else{
-			echo "Registro Fallido";
-			echo "<br><br><a href='../Vistas/Crear.php'>Registrar Nuevo</a>";
+			header('Location: ../Vistas/FallidoRU.php');
 		}
 		
 ?>

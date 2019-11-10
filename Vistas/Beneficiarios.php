@@ -24,7 +24,7 @@
     <!-- Contenido -->
       <section class="main container">
         <div class="contenido">
-          <BR><HR>
+          <HR>
             <H1 align= "center">Beneficiarios</H1>
             <BR>
             <div class="tabla-m">
@@ -42,7 +42,7 @@
                 <a href="EliminarBeneficiario.html"><h3><span class="icon-user-minus"></span>Eliminar Beneficiarios</h3></a>
               </div>
               <div class="boton-menu">
-                <a href="SuspenderBeneficiario.html"><h3><span class="icon-lock"></span>Suspender Beneficiarios</h3></a>
+                <a href="SuspenderBeneficiarioB.php"><h3><span class="icon-lock"></span>Suspender Beneficiarios</h3></a>
               </div>
             </div>
           <br>

@@ -1,5 +1,8 @@
 <?php
-  require '../Controladores/VerificarSesion.php'
+  require '../Controladores/VerificarSesion.php';
+  if ($_SESSION['TipoU'] != 1) {
+    header('Location: ../Vistas/Acceso.php');
+  }
 ?>
 <!DOCTYPE html>
 <HTML lang="es">

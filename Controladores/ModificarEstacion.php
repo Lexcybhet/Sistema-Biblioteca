@@ -17,12 +17,9 @@ require 'ConexionBaseDatos.php';
 /*Confirmar si se realiza*/
 
 		if ($Conexion->query($Actualizar) === true) {
-			echo "Registro Exitoso";
-			echo "<br><br><a href='../Vistas/RegistrarEstacion.php'>Registrar Nueva</a>";
-			echo "<br><br><a href='../Vistas/ConsultarEstaciones.php'>Mostrar Registros</a>";
+			header('Location: ../Vistas/AprobadoRE.php');
 		}else{
-			echo "Registro Fallido";
-			echo "<br><br><a href='../Vistas/RegistrarEstacion.php'>Registrar Nueva</a>";
+			header('Location: ../Vistas/FallidoRE.php');
 		}
 		
 ?>

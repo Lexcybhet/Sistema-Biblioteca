@@ -76,6 +76,10 @@
                     </select><br>
                   <label for="tipo"><B>Introduzca Correo Electrónico del Usuario: </B></label> 
                     <input class="input" type="email" name="CorreoU" placeholder="Correo Electrónico" value="<?php  echo $var_fila['Correo_Beneficiario'];?>" required>
+                    <select name="EstadoBeneficiario" value="<?php  echo $var_fila['Estado'];?>">
+                      <option value="1">Activo</option>
+                      <option value="2">Usuario Bloqueado</option>
+                    </select><br>
                       <div class="btn-form">
                         <input class="btn-submit" type="submit" value="GUARDAR">
                         <input class="btn-reset" type="reset" value="LIMPIAR">

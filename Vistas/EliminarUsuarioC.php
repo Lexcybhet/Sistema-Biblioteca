@@ -1,6 +1,9 @@
 <?php 
 
   require '../Controladores/VerificarSesion.php';
+  if ($_SESSION['TipoU'] != 1) {
+    header('Location: ../Vistas/Acceso.php');
+  }
   $id=$_POST['Buscador'];  
 
 ?>

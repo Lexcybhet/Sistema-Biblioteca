@@ -14,20 +14,18 @@ require 'ConexionBaseDatos.php';
 	$TipoB = $_POST['TipoBeneficiario'];
 	$CarreraB = $_POST['CarreraBe'];
 	$CorreoB = $_POST['CorreoU'];
+	$EstadoB = $_POST['EstadoBeneficiario'];
 
 /*Metodo Para Actualizar Datos en la Base de Datos*/
 
-	$Actualizar = " UPDATE Beneficiario SET Cedula_Beneficiario='$CedulaB', Nombre_Beneficiario='$NombreB', Apellido_Beneficiario='$ApellidoB', Genero='$GeneroB', Tipo_Beneficiario='$TipoB', Carrera='$CarreraB', Correo_Beneficiario='$CorreoB' WHERE Cedula_Beneficiario='$id' ";
+	$Actualizar = " UPDATE Beneficiario SET Cedula_Beneficiario='$CedulaB', Nombre_Beneficiario='$NombreB', Apellido_Beneficiario='$ApellidoB', Genero='$GeneroB', Tipo_Beneficiario='$TipoB', Carrera='$CarreraB', Correo_Beneficiario='$CorreoB', Estado='$EstadoB' WHERE Cedula_Beneficiario='$id' ";
 
 /*Confirmar si se realiza*/
 
 		if ($Conexion->query($Actualizar) === true) {
-			echo "Registro Exitoso";
-			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";
-			echo "<br><br><a href='../Vistas/ConsultarBeneficiario.php'>Mostrar Registros</a>";
+			header('Location: ../Vistas/AprobadoRB.php');
 		}else{
-			echo "Registro Fallido";
-			echo "<br><br><a href='../Vistas/Registrar.php'>Registrar Nuevo</a>";
+			header('Location: ../Vistas/FallidoRB.php');
 		}
 		
 ?>	

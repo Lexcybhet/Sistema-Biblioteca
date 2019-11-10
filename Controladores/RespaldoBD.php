@@ -1,30 +1,64 @@
 <?php
-	
-	$db_host = 'localhost'; //Host del Servidor MySQL
-	$db_name = 'Control_acceso'; //Nombre de la Base de datos
-	$db_user = 'root'; //Usuario de MySQL
-	$db_pass = ''; //Password de Usuario MySQL
-	
-	$fecha = date("Ymd-His"); //Obtenemos la fecha y hora para identificar el respaldo
-
-	// Construimos el nombre de archivo SQL 
-	$salida_sql = $db_name.'_'.$fecha.'.sql'; 
-	
-	//Comando para genera respaldo de MySQL, enviamos las variales de conexion y el destino
-	$dump = "mysqldump --h$db_host -u$db_user -p$db_pass --opt $db_name > $salida_sql";
-	system($dump, $output); //Ejecutamos el comando para respaldo
-	
-	$zip = new ZipArchive(); //Objeto de Libreria ZipArchive
-	
-	//Construimos el nombre del archivo ZIP Ejemplo: mibase_20160101-081120.zip
-	$salida_zip = $db_name.'_'.$fecha.'.zip';
-	
-	if($zip->open($salida_zip,ZIPARCHIVE::CREATE)===true) { //Creamos y abrimos el archivo ZIP
-		$zip->addFile($salida_sql); //Agregamos el archivo SQL a ZIP
-		$zip->close(); //Cerramos el ZIP
-		unlink($salida_sql); //Eliminamos el archivo temporal SQL
-		header ("Location: $salida_zip"); // Redireccionamos para descargar el Arcivo ZIP
-		} else {
-		echo 'Error'; //Enviamos el mensaje de error
-	}
+include 'ConexionRespaldo.php';
+$fecha = date("Y-m-d"); 
+$hora = date("H-i-s");
+$db_name = BD;
+$DataBASE=  $db_name.'_'.$fecha.'_'.$hora.'_hrs.sql'; 
+$tables=array();
+$result=SGBD::sql('SHOW TABLES');
+if($result){
+    while($row=mysqli_fetch_row($result)){
+       $tables[] = $row[0];
+    }
+    $sql='SET FOREIGN_KEY_CHECKS=0;'."\n\n";
+    $sql.='CREATE DATABASE IF NOT EXISTS '.BD.";\n\n";
+    $sql.='USE '.BD.";\n\n";;
+    foreach($tables as $table){
+        $result=SGBD::sql('SELECT * FROM '.$table);
+        if($result){
+            $numFields=mysqli_num_fields($result);
+            $sql.='DROP TABLE IF EXISTS '.$table.';';
+            $row2=mysqli_fetch_row(SGBD::sql('SHOW CREATE TABLE '.$table));
+            $sql.="\n\n".$row2[1].";\n\n";
+            for ($i=0; $i < $numFields; $i++){
+                while($row=mysqli_fetch_row($result)){
+                    $sql.='INSERT INTO '.$table.' VALUES(';
+                    for($j=0; $j<$numFields; $j++){
+                        $row[$j]=addslashes($row[$j]);
+                        $row[$j]=str_replace("\n","\\n",$row[$j]);
+                        if (isset($row[$j])){
+                            $sql .= '"'.$row[$j].'"' ;
+                        }
+                        else{
+                            $sql.= '""';
+                        }
+                        if ($j < ($numFields-1)){
+                            $sql .= ',';
+                        }
+                    }
+                    $sql.= ");\n";
+                }
+            }
+            $sql.="\n\n\n";
+        }else{
+            $error=1;
+        }
+    }
+    if($error==1){
+        echo 'Ocurrio un error inesperado al crear la copia de seguridad';
+    }else{
+        chmod(BACKUP_PATH, 0777);
+        $sql.='SET FOREIGN_KEY_CHECKS=1;';
+        $handle=fopen(BACKUP_PATH.$DataBASE,'w+');
+        if(fwrite($handle, $sql)){
+            fclose($handle);
+            header('Location: ../Vistas/AprobadoR.php');
+        }else{
+            header('Location: ../Vistas/FallidoR.php');
+        }
+    }
+}else{
+    echo 'Ocurrio un error inesperado';
+}
+mysqli_free_result($result);
 ?>

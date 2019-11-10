@@ -14,9 +14,9 @@ require 'ConexionBaseDatos.php';
 /*Confirmar si se realiza*/
 
 		if ($Conexion->query($Eliminar) === true) {
-			header('Location: ../Vistas/ConsultarUsuarios.php');
+			header('Location: ../Vistas/AprobadoE.php');
 		}else{
-			echo "Fallido";
+			header('Location: ../Vistas/FallidoE.php');
 		}
 		
 ?>

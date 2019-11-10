@@ -31,22 +31,22 @@
               <div class="form-top">
                 <h2>Registro de <span>Beneficiario</span></h2>
               </div>
-                <form class="form-reg" action="../Controladores/RegistrarBeneficiario.php" id="Beneficiario" name="Beneficiario" method="POST">
+                <form class="form-reg" action="../Controladores/RegistrarBeneficiario.php" id="Beneficiario" name="Beneficiario" method="POST" autocomplete="off">
                   <label for="tipo"><B>Introduzca Nombre del Beneficiario: </B></label> 
-                    <input class="input" type="text" name="NombreBeneficiario" placeholder="Nombre" required autofocus>
+                    <input class="input" type="text" name="NombreBeneficiario" placeholder="Nombre" required autofocus maxlength="15">
                   <label for="tipo"><B>Introduzca Apellido del Beneficiario: </B></label> 
-                    <input class="input" type="text" name="ApellidoBeneficiario" placeholder="Apellidos" required autofocus>
+                    <input class="input" type="text" name="ApellidoBeneficiario" placeholder="Apellidos" required autofocus maxlength="15">
                   <label for="tipo"><B>Introduzca Cedula del Beneficiario: </B></label> 
-                    <input class="input" type="tel" name="CedulaBeneficiario" placeholder="Cedula" required >
+                    <input class="input" type="tel" name="CedulaBeneficiario" placeholder="Cedula" required max="10">
                   <label for="sexo"><B>Seleccione su género:</B></label><br> 
                     <select name="GeneroBeneficiario">
-                      <option value=""></option>
+                      <option value="">Seleccione una opcion</option>
                       <option value="MASCULINO">MASCULINO</option>
                       <option value="FEMENINO">FEMENINO</option>
                     </select><br>
                   <label for="tipo"><B>Seleccione tipo de Beneficiario: </B></label><br> 
                     <select name="TipoBeneficiario" required>
-                      <option value=""></option>
+                      <option value="">Seleccione una opcion</option>
                       <option value="ESTUDIANTE">ESTUDIANTE</option>
                       <option value="DOCENTE">DOCENTE</option>
                       <option value="PERSONAL ADMINISTRATIVO">PERSONAL ADMINISTRATIVO</option>
@@ -55,8 +55,9 @@
                     </select><br>
                   <label for="tipo"><B>Seleccione Carrera de Beneficiario: </B></label><br>
                     <select name="CarreraBeneficiario" required>
-                      <option value=""></option>
+                      <option value="">Seleccione una opcion</option>
                       <option value="Manejo de Emergencias y Acción Contra Desastres"> Manejo de Emergencias y Acción Contra Desastres</option>
+                      <option value="">Seleccione una opcion</option>
                       <option value="PNF en Administración">PNF en Administración</option>
                       <option value="PNF en Agroalimentación">PNF en Agroalimentación</option>
                       <option value="PNF en Contaduría Pública">PNF en Contaduría Pública</option>

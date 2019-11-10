@@ -31,7 +31,7 @@
               <div class="form-top">
                 <h2>Registro de <span>Estaciones</span></h2>
               </div>
-                <form class="form-reg" action="../Controladores/RegistrarEstaciones.php" id="Estaciones" name="Estaciones" method="POST">
+                <form class="form-reg" action="../Controladores/RegistrarEstaciones.php" id="Estaciones" name="Estaciones" method="POST" autocomplete="off">
                   <label for="tipo"><B>Introduzca Codigo del Equipo: </B></label> 
                     <input class="input" type="text" name="CodigoEquipo" placeholder="Codigo" required autofocus>
                   <label for="sexo"><B>Seleccione el Estado del Equipo:</B></label><br> 

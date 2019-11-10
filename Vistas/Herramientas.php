@@ -1,5 +1,5 @@
 <?php
-  require '../Controladores/VerificarSesion.php'
+  require '../Controladores/VerificarSesion.php';
 ?>
 <!DOCTYPE html>
 <HTML lang="es">
@@ -24,19 +24,19 @@
     <!-- Contenido -->
       <section class="main container">
         <div class="contenido">
-          <BR><HR>
+          <HR>
             <H1 align= "center">Herramientas</H1>
           <HR><BR>
             <div class="tabla-m">
               <br>
               <div class="boton-menu">
-                <a href=""><h3><span class="icon-stats-dots"></span>Estadisticas</h3></a>
+                <a href="EstadisticasG.php"><h3><span class="icon-stats-dots"></span>Estadisticas</h3></a>
               </div>
               <div class="boton-menu">
                 <a href="CopiadeSeguridad.php"><h3><span class="icon-cloud-download"></span>Copia de Seguridad</h3></a>
               </div>
               <div class="boton-menu">
-                <a href=""><h3><span class="icon-database"></span>Restaurar Base de Datos</h3></a>
+                <a href="RestaurarBD.php"><h3><span class="icon-database"></span>Restaurar Base de Datos</h3></a>
               </div>              
               <div class="boton-menu">
                 <a href="Bitacora.php"><h3><span class="icon-database"></span>Bitacora</h3></a>
